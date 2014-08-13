@@ -2,9 +2,11 @@ Rails.application.routes.draw do
 
   get 'events' => 'events#index'
 
-  get 'events/new'
+  get 'events/new' => 'events#new'
 
-  get 'events/create'
+  post 'events' => 'events#create'
+
+  get 'events/:id' => 'events#show', as: :event
 
   get 'events/show'
 
