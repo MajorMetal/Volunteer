@@ -1,7 +1,20 @@
 <h1>Events Near You</h1>
+<p>
+	<%= link_to "Add New Event", new_event_path %>
+</p>
 
 <% @events.each do |event| %>
 	
-	<%= event.name %>
+	<h3>
+		<%= link_to event.name, event %>
+	</h3>
+
+	<br/>
+
+	<p><%= event.image %></p><br/>
+	<p><%= event.location %></p><br/>
+
+	<p>
+	<hr/>
 
 <% end %>
