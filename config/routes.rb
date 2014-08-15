@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+
+  get 'signup' => 'users#new', as: :sign_up
+  root "users#new"
+
+  get 'signin' => 'sessions#new', as: :sign_in
+  delete 'signout' => 'sessions#delete', as: :sign_out
+  resources :sessions, only: [:create]
+
   get 'events' => 'events#index'
 
   get 'events/new' => 'events#new'
@@ -8,7 +16,7 @@ Rails.application.routes.draw do
 
   get 'events/:id' => 'events#show', as: :event
 
-  get 'events/show'
+  get 'users/:id/edit' => 'users#edit'
 
   get 'events/edit'
 
@@ -18,6 +26,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :events
+ 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
