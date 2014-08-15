@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
 
+  root 'events#index'
 
   get 'signup' => 'users#new', as: :sign_up
-  root "users#new"
-
+  post  'signup' => 'users#create'
+  
   get 'signin' => 'sessions#new', as: :sign_in
+  post 'signin' => 'sessions#create'
   delete 'signout' => 'sessions#delete', as: :sign_out
+  
   resources :sessions, only: [:create]
 
-  get 'events' => 'events#index'
 
   get 'events/new' => 'events#new'
 
@@ -16,13 +18,17 @@ Rails.application.routes.draw do
 
   get 'events/:id' => 'events#show', as: :event
 
-  get 'users/:id/edit' => 'users#edit'
+  # get 'users/:id/edit' => 'users#edit'
 
   get 'events/edit'
 
   get 'events/update'
 
   get 'events/destroy'
+
+  # get 'users/' => 'users#index'
+
+  # delete 'users/:id' => 'users#destroy'
 
   resources :users
   resources :events
@@ -32,7 +38,6 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

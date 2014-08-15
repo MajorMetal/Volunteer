@@ -4,22 +4,13 @@ class User < ActiveRecord::Base
 	belongs_to :events
 
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i
-	
 	before_save {self.email = email.downcase}
-
-	validates :password, length: {minimum: 6}
-
-
+	
 	validates :email, presence: :true,
 				format: {with: VALID_EMAIL_REGEX},
 				uniqueness: {case_sensitive: false}
 
-	# before_save :hash_password
-	
-	# def hash_password
-	# 	self.password = Digest::SHA1.hexdigest(
-	# 	self.password.to_s)
-	# end
+	validates :password, length: {minimum: 6}
 
 	before_create :create_remember_token
 	has_secure_password
@@ -37,6 +28,12 @@ class User < ActiveRecord::Base
 		self.remember_token = User.digest(User.new_remember_token)
 	end
 
-	
-
 end
+
+	
+	# before_save :hash_password
+	
+	# def hash_password
+	# 	self.password = Digest::SHA1.hexdigest(
+	# 	self.password.to_s)
+	# end

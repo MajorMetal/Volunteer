@@ -1,6 +1,4 @@
-<h1>Thank you for volunteering <%= @user.name%> </h1>
+<h1>Thank you for volunteering, <%= @user.name %>! </h1>
 <%= "Here are the events you have signed up for:" %><br/>
 
-<%= link_to "Edit Your Profile", edit_user_path %>
-<%= button_to "Delete Account", @user, method: 'delete' %>
-<%= link_to "Back To Events", events_path %>
+<%= link_to "Back To Events", events_path %> | <%= link_to 'Delete You Account', @user, method: :delete, data: { confirm: 'Are you sure?' } %> 
