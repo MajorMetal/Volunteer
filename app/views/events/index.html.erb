@@ -1,20 +1,21 @@
-<h1>Events Near You</h1>
-<p>
-	<%= link_to "Add New Event", new_event_path %>
-</p>
-
-<% @events.each do |event| %>
-	
-	<h3>
-		<%= link_to event.name, event %>
-	</h3>
-
-	<br/>
-
-	<p><%= event.image %></p><br/>
-	<p><%= event.location %></p><br/>
-
+<div class="addNewPage">
+	<h1>Events Near You</h1>
 	<p>
-	<hr/>
+	 <%= link_to "Add New Event", ( new_event_path ), class: "btn btn-primary" %>
+	</p>
 
-<% end %>
+	<% @events.each do |event| %>
+		<%= link_to event do %>
+			<div class="eventTile">
+				<h3><%= event.name %></h3>
+				<p><%= event.location %></p>
+				<p><%= event.description %></p>
+				<p><%= event.contact_phone %></p>
+				<p><%= event.contact_email %></p>
+				<p><%= image_tag(( event.image ), :class => "style_image") %></p>
+
+
+			</div>
+		<% end %>	
+	<% end %>
+</div>
