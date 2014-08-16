@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
   get 'events/edit'
 
+
   get 'events/update'
 
   get 'events/destroy'
