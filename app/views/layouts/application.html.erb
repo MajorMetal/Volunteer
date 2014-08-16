@@ -16,13 +16,14 @@
       <nav>
       	
 	    	<a class="navbar-brand">Volunteer App</a>
-		
+        
+          
         <ul class="nav pull-right">
           <% if signed_in? %>
             <li id="fat-menu" class="dropdown">
               <button type="button" class="btn btn-info dropdown-toggle navbar-btn" data-toggle="dropdown">
               Menu <span class="caret"></span>
-              </button>
+              </button> 
               <ul class="dropdown-menu">
                 <li><%= link_to "Profile", current_user %></li>
                 <li class="divider"></li>
@@ -34,6 +35,11 @@
           <% else %>
             <%= link_to "Sign in", sign_in_path, class: "btn btn-info navbar-btn" %>
           <% end %>
+        </ul>
+        <ul class="nav navbar-right">
+          <li><div><%= link_to "Add New Event", ( new_event_path ), class: "btn btn-primary navbar-btn" %></div>
+           </li> 
+
         </ul>
       </nav>
     </div>

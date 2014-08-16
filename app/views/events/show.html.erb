@@ -1,5 +1,5 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<h1><%= @event.name %></h1>
+
 
 
     <div class="eventTile">
@@ -8,5 +8,5 @@
 		<p><%= @event.description %></p>
 		<p><%= @event.contact_phone %></p>
 		<p><%= @event.contact_email %></p>
-		<p><%= image_tag(( @event.image ), :class => "style_image") %></p>
+		<div><%= image_tag(( @event.image ), :class => "style_image") %><div> 	
 	</div>
