@@ -2,6 +2,66 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-	padding-top: 60px
+ 
+.addNewPage{
+  background-color: rgb(63,103,134);
+  height: 100%;
+  width: 100%;
 }
+
+ .formAddEventTile {
+  background-color: rgb(153,153,153);
+  margin: 0 5px 30px;
+  border-radius: 5px;
+  padding: 10px 10px 30px;
+  text-align: center;
+  position: fixed;
+  display: inline-block;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -180px;
+  }
+ 
+ #addEventTitle{
+  color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -90px;
+  margin-left: -160px;
+  margin-right: -120px;
+ } 
+ .addEventInput input[type=text]{
+  text-align: center;
+  width: 250px;
+  height: 30px;
+  margin-bottom:5px;
+  border-radius:5px;
+ }
+
+ .eventTile {
+  background-color: rgb(153,153,153);
+  margin: 0 5px 5px;
+  border-radius: 5px;
+  padding: 0px 5px 10px;
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+  width: 1000px;
+  height: 200px;
+  margin-left: 50px;
+  margin-right: 50px;
+  }
+ .style_image {
+  height: 175px;
+  width: 200px;
+  border-radi`us: 5px;
+  margin-right: 700px;
+  margin-top: -175px;
+}
+
+

@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>VolunteerApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>VolunteerApp</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+
 
 
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
       <nav>
+      	<div class="container" >
+	    	<a class="navbar-brand">Volunteer App</a>
+		</div>
         <ul class="nav pull-right">
           <% if signed_in? %>
             <li id="fat-menu" class="dropdown">
@@ -36,7 +40,8 @@
   </div>
 </header>
 
-<%= yield %>
 
-</body>
+	<%= yield %>
+
+	</body>
 </html>
