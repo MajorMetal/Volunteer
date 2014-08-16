@@ -3,14 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
  
-.addNewPage{
-  background-color: rgb(63,103,134);
+.addNewPage{;
   height: 100%;
   width: 100%;
+  text-align: center;
 }
 
  .formAddEventTile {
-  background-color: rgb(153,153,153);
   margin: 0 5px 30px;
   border-radius: 5px;
   padding: 10px 10px 30px;
@@ -44,7 +43,8 @@
  }
 
  .eventTile {
-  background-color: rgb(153,153,153);
+  background-color: #D8E2E3;
+  opacity: .9;
   margin: 0 5px 5px;
   border-radius: 5px;
   padding: 0px 5px 10px;
@@ -56,6 +56,7 @@
   margin-left: 50px;
   margin-right: 50px;
   }
+
  .style_image {
   height: 175px;
   width: 200px;

@@ -11,14 +11,13 @@ Rails.application.routes.draw do
   
   resources :sessions, only: [:create]
 
-
   get 'events/new' => 'events#new'
 
   post 'events' => 'events#create'
 
   get 'events/:id' => 'events#show', as: :event
 
-  # get 'users/:id/edit' => 'users#edit'
+  get 'users/:id/edit' => 'users#edit'
 
   get 'events/edit'
 
