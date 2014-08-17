@@ -21,7 +21,6 @@ Rails.application.routes.draw do
 
   get 'events/edit'
 
-
   get 'events/update'
 
   get 'events/destroy'
@@ -29,6 +28,14 @@ Rails.application.routes.draw do
   # get 'users/' => 'users#index'
 
   # delete 'users/:id' => 'users#destroy'
+
+  get 'vevents' => 'signups#index', as: :vevents
+
+  get 'vevents/new' => 'signups#new', as: :new_vevent
+
+  post 'vevents' => 'signups#create'
+
+  get 'vevents' => 'signups#show'
 
   resources :users
   resources :events

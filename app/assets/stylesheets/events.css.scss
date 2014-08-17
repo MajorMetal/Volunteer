@@ -2,38 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
- 
-.addNewPage{;
-  height: 100%;
-  width: 100%;
+/********************************************************
+***********************FRONT PAGE***********************/
+
+.addNewPage{
   text-align: center;
 }
 
  .formAddEventTile {
-  margin: 0 5px 30px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px 10px 30px;
-  text-align: center;
-  position: fixed;
+  text-align: center; 
   display: inline-block;
-  overflow: hidden;
-  width: 300px;
-  height: 300px;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -180px;
+  width: 500px;
+  height: auto;
+  background-color: #E8E6E1;
+  margin-top: 100px;
+  opacity: .9
   }
- 
- #addEventTitle{
-  color: black;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -90px;
-  margin-left: -160px;
-  margin-right: -120px;
- } 
+
  .addEventInput input[type=text]{
   text-align: center;
   width: 250px;
@@ -65,4 +52,20 @@
   margin-top: -235px;
 }
 
+/**************************************************
+********************SHOW PAGE*********************/
 
+.jumbotron {
+  margin-top: -10px;
+  opacity: .9
+}
+
+.showImage{
+  width:100%;
+}
+
+.showBody {
+  font-size: 24px;
+  background-color: #D8E2E3;
+  border-radius: 5px
+}

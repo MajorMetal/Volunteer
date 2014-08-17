@@ -1,0 +1,9 @@
+<%= form_for(@signup, url: vevents_path) do |f| %>
+
+
+<%= f.hidden_field :user_id, :value => @user_id %>
+<%= f.hidden_field :event_id, :value => @event_id %>
+
+<%= f.submit "Confirm intent to volunteer", class: "btn btn-large btn-primary" %>
+
+<% end %>

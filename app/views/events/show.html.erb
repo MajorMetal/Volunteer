@@ -1,12 +1,21 @@
-<h1><%= @event.name %></h1>
+<div class="showPage">
 
+<div class="jumbotron">
+  <h1><%= @event.name %></h1>
+</div> 
 
+   <div class="showBody .container-fluid">
+   		<div class="col-lg-5">
+   			<%= image_tag(( @event.image ), :class => "showImage") %>	
+   		</div>
 
-    <div class="eventTile">
-		<h3><%= @event.name %></h3>
-		<p><%= @event.location %></p>
-		<p><%= @event.description %></p>
-		<p><%= @event.contact_phone %></p>
-		<p><%= @event.contact_email %></p>
-		<div><%= image_tag(( @event.image ), :class => "style_image") %><div> 	
+   		<div class="col-lg-7">
+	   		<p><%= @event.location %></p>
+			<p><%= @event.description %></p>
+			<p><%= @event.contact_phone %></p>
+			<p><%= @event.contact_email %></p>
+			<%= link_to 'Click Here To Volunteer!', new_vevent_path(@event) %>
+   		</div>
 	</div>
+
+

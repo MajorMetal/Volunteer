@@ -1,10 +1,7 @@
-
 <div class="addNewPage">
+
 	<h1>Events Near You</h1>
 	
-	
-	
-
 	<% @events.each do |event| %>
 		<%= link_to event do %>
 			<div class="eventTile">
@@ -12,7 +9,7 @@
 				<p><%= event.location %></p>
 				<p><%= l event.when, format: :long %></p>
 				<p><%= event.description %></p>
-				<p><%= event.contact_phone %></p>
+				<p>Phone: <%= event.contact_phone %></p>
 				<p><%= event.contact_email %></p>
 				<p><%= image_tag(( event.image ), :class => "style_image") %></p>
 			</div>
