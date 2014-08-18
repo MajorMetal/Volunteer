@@ -4,18 +4,21 @@
   <h1><%= @event.name %></h1>
 </div> 
 
-   <div class="showBody .container-fluid">
-   		<div class="col-lg-5">
-   			<%= image_tag(( @event.image ), :class => "showImage") %>	
-   		</div>
-
-   		<div class="col-lg-7">
-	   		<p><%= @event.location %></p>
-			<p><%= @event.description %></p>
-			<p><%= @event.contact_phone %></p>
-			<p><%= @event.contact_email %></p>
-			<%= link_to 'Click Here To Volunteer!', new_vevent_path(@event) %>
-   		</div>
-	</div>
-
-
+  <div class="row">
+   <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img><%= image_tag(( @event.image ), :class => "showImage") %>>  
+      <div class="caption">
+        
+      <p><%= @event.location %></p>
+      <p><%= @event.description %></p>
+      <p><%= @event.contact_phone %></p>
+      <p><%= @event.contact_email %></p>
+       <%= link_to 'Back', events_path, :class => "btn btn-primary" %>
+       <%= link_to 'Edit', edit_event_path, :class => "btn btn-warning" %>
+       <%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+      
+    </div>
+  </div>
+ </div>
+</div>
