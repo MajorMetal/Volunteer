@@ -4,6 +4,11 @@
 # Examples:
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+User.create(name: 'David', email: 'david@example.com', zip_code:'92683', password_digest: 'david1')
+
+User.create(name: 'Matt', email: 'matt@example.com', zip_code:'92683', password_digest: 'matt12')
+
+User.create(name: 'Ruby', email: 'ruby@example.com', zip_code:'92633', password_digest: 'ruby12')
 
 Event.create(name: 'The Starlight Awards', location: '214 South Main Street, Los Angeles, 90012', when: DateTime.new(2014, 10, 23, 18), description:'Philanthropists Awards Dinner', image: 'http://www.starlight.org/sites/default/files/styles/event_teaserimage/public/events/teasers/SCF_StarlightAwards_3.jpg', contact_phone: '4242453664', contact_email: 'www.starlight.org.contact')
 

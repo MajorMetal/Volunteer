@@ -1,0 +1,11 @@
+<h1>Event's you've volunteer for</h1>
+	
+	<% @vevents.each do |vevent| %>
+		<%= link_to vevent do %>
+			<div>
+				<p><%= Event.find(vevent.event_id).name %> </p>
+
+			</div>
+		<% end %>	
+	<% end %>
+</div>

@@ -1,7 +1,7 @@
 class SignupsController < ApplicationController
 
 def index
-	@signups = Signup.all
+	@vevents = Signup.all
 end
 
 def new

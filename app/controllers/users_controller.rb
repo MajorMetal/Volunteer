@@ -51,7 +51,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to @events_path
+    redirect_to events_path
   end
 
 private

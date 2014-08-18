@@ -1,22 +1,25 @@
-<h1>Add New User!</h1>
+<div class="logInForm">
+    <div class="addEventInput">
+        <h1 id="addEventTitle">Create a New Account!</h1>
+          <div class="row">
+            <%= form_for(@user) do |f| %>
 
-<%= form_for(@user) do |f| %>
-
- <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:
-      <ul>
-        <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-	<%= f.text_field :name, placeholder: 'Name'%>
-	<%= f.text_field :email, placeholder: 'Email'%>
-	<%= f.text_field :password, placeholder: 'Password'%>
-	<%= f.text_field :password_confirmation, placeholder: 'Confirm Password'%>
-	<%= f.submit %>
-
-<% end %>
+			  <% if @user.errors.any? %>
+			    <div id="error_explanation">
+			      <%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:
+			      <ul>
+			        <% @user.errors.full_messages.each do |message| %>
+			        <li><%= message %></li>
+			        <% end %>
+			      </ul>
+			    </div>
+			  <% end %>
+				<%= f.text_field :name, placeholder: 'Name'%><br/>
+				<%= f.text_field :email, placeholder: 'Email'%><br/>
+				<%= f.text_field :password, placeholder: 'Password'%><br/>
+				<%= f.text_field :password_confirmation, placeholder: 'Confirm Password'%><br/>
+				<%= f.submit "Create Account", class: "btn btn-info" %>
+				<% end %>
+      	</div>
+    </div>
+</div>
