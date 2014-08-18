@@ -19,9 +19,9 @@ Rails.application.routes.draw do
 
   get 'users/:id/edit' => 'users#edit'
 
-  get 'events/edit'
+  get 'events/edit' =>'events#edit'
 
-  get 'events/update'
+  patch 'events/update' => 'events#update'
 
   get 'events/destroy'
 
