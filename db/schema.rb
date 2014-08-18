@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140815041144) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "events", force: true do |t|
     t.string   "name"
     t.string   "location"
@@ -32,8 +35,8 @@ ActiveRecord::Schema.define(version: 20140815041144) do
     t.integer  "event_id"
   end
 
-  add_index "signups", ["event_id"], name: "index_signups_on_event_id"
-  add_index "signups", ["user_id"], name: "index_signups_on_user_id"
+  add_index "signups", ["event_id"], name: "index_signups_on_event_id", using: :btree
+  add_index "signups", ["user_id"], name: "index_signups_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
@@ -45,7 +48,7 @@ ActiveRecord::Schema.define(version: 20140815041144) do
     t.string   "remember_token"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
 end
